@@ -1,1 +1,35 @@
-<p>shopping-cart works!</p>
+<div class="p-3">
+
+    <!-- Título -->
+    <h4 class="mb-2">Carrito</h4>
+
+    <!-- Lista sesiones -->
+    <ul class="list-group list-group-flush"
+        *ngFor="let event of cartArray">
+        <!-- Nombre evento -->
+        <h5 class="list-group-item">{{ event.title }}</h5>
+
+        <!-- Sesiones evento -->
+        <li class="list-group-item d-flex justify-content-between"
+        *ngFor="let session of event.sessions">
+            <div>
+                {{ session.date | date: 'dd/MM/yyyy' }}
+            </div>
+            <div class="d-flex justify-content-evenly">
+                <!-- Total amount -->
+                <p class="mr-1 align-self-center">x{{ session.totalAmount }}</p>  
+                
+                <!-- Papelera -->
+                <img class="img-fluid mt-1" src="../../../../assets/img/trash.png" alt="Eliminar">                
+            </div>
+        </li>       
+    </ul>
+
+    <!-- Cart empty block -->
+    <!-- <div class="p-3 d-flex"
+        *ngIf="!cartArray">
+        <p>Shopping cart vacío</p>
+    </div> -->
+        
+</div>
+
