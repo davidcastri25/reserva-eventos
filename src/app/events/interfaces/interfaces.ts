@@ -29,3 +29,10 @@ export interface Session {
     eventId?:     string;
     totalAmount?: number;
 }
+
+//Interfaz para el array del cart
+export interface Cart {
+    eventId:    string;
+    title:      string;
+    sessions:   Session[];
+}
