@@ -55,7 +55,14 @@ export class EventDetailComponent implements OnInit {
           this.eventToShow = event;
           //Devuelvo las sesiones
           return event.sessions.sort( (a, b) => parseInt(a.date) - parseInt(b.date) )
-        } ) )
+        } ) ),
+        //Añado otro map que inicializa el totalAmount de cada sesión a 0
+        map((sessions) => {
+            return sessions.map((eachSession: Session) => {
+              eachSession.totalAmount = 0;
+              return eachSession
+            })
+        })
       )
       .subscribe( sessions => this.sessionsToShow = sessions);
   }

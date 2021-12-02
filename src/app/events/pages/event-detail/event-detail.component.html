@@ -16,7 +16,8 @@
         <app-session-list 
             class="col-md-6 mb-4 mb-md-0"
             [sessionsToShow]="sessionsToShow"
-            *ngIf="eventToShow"></app-session-list>
+            [eventId]="id"
+            *ngIf="eventToShow"></app-session-list> <!-- Paso a componente hijo las sesiones a mostrar y el id del evento -->
 
         <!-- Error block -->
         <div class="col-md-6 mb-4 mb-md-0"

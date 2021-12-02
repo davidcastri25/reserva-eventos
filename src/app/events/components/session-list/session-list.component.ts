@@ -17,6 +17,7 @@ export class SessionListComponent implements OnInit {
 
   /* Properties */
   @Input() sessionsToShow!: Session[];
+  @Input() eventId!: string; //Recibe del padre el ID
 
   constructor() { }
 
@@ -25,6 +26,9 @@ export class SessionListComponent implements OnInit {
   }
 
   increment(session: Session) {
+    //Añado el id del evento a la sesión clickada
+    session.eventId = this.eventId;
+
     console.log(session);
   }
 
