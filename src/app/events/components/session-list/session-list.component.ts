@@ -25,11 +25,32 @@ export class SessionListComponent implements OnInit {
     
   }
 
+
+  //Incrementa totalAmount en 1
   increment(session: Session) {
+    //Añado el id del evento a la sesión clickada
+    session.eventId = this.eventId;    
+
+    //Compruebo que no se salga de los límites (availability)
+    if (session.totalAmount! < parseInt(session.availability)) {
+      session.totalAmount!++;
+    }
+
+    console.log(session);    
+  }
+
+  //Decrementa totalAmount en 1
+  decrement(session: Session) {
     //Añado el id del evento a la sesión clickada
     session.eventId = this.eventId;
 
+    //Compruebo que no se salga de los límites (0)
+    if (session.totalAmount! > 0) {
+      session.totalAmount!--;
+    }
+
     console.log(session);
   }
+
 
 }

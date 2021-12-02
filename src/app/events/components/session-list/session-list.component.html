@@ -17,7 +17,8 @@
             <div>
                 <!-- Botón menos -->
                 <span class="mr-2">
-                    <fa-icon [icon]="faMinus"></fa-icon>
+                    <fa-icon [icon]="faMinus"
+                        (click)='decrement(session)'></fa-icon>
                 </span>                
                 <!-- Número -->
                 <span>{{ session.totalAmount }}</span>
