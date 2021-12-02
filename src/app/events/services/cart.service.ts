@@ -80,7 +80,12 @@ export class CartService {
       //Hacemos splice de la sesión si total amount == 0
       if(this.arrayCart[indexEvent].sessions[indexSession].totalAmount === 0) {
        this.arrayCart[indexEvent].sessions.splice(indexSession, 1);
-      }      
+      }
+      
+      //Comprobamos si hay que borrar el evento
+      if (this.arrayCart[indexEvent].sessions.length === 0) {
+        this.arrayCart.splice(indexEvent, 1);
+      }
     }
     
     

@@ -20,7 +20,10 @@
                 <p class="mr-1 align-self-center">x{{ session.totalAmount }}</p>  
                 
                 <!-- Papelera -->
-                <img class="img-fluid mt-1" src="../../../../assets/img/trash.png" alt="Eliminar">                
+                <img class="img-fluid mt-1" 
+                    src="../../../../assets/img/trash.png" 
+                    alt="Eliminar"
+                    (click)="decrement(session, event.eventId)">                
             </div>
         </li>       
     </ul>
