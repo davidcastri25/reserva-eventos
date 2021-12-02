@@ -68,7 +68,19 @@ export class CartService {
 
       
     } else {
+
       cartReceived.sessions[0].totalAmount!--;
+
+      //Buscamos el índice del evento al que pertenece
+      indexEvent = this.cartAlreadyAdded(cartReceived.eventId);
+
+      //Buscamos el índice de la sesión
+      indexSession = this.sessionAlreadyAdded(cartReceived.sessions[0].date, indexEvent);
+
+      //Hacemos splice de la sesión si total amount == 0
+      if(this.arrayCart[indexEvent].sessions[indexSession].totalAmount === 0) {
+       this.arrayCart[indexEvent].sessions.splice(indexSession, 1);
+      }      
     }
     
     
