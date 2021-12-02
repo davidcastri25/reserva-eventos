@@ -26,22 +26,6 @@ export interface EventInfo {
 export interface Session {
     date:         string;
     availability: string;
-}
-
-//Interfaz para el carrito
-export interface Cart {
-    cartItems:  CartItems[];
-}
-
-//Interfaz para items del carrito
-export interface CartItems {
-    id:          string;
-    title:       string;
-    sessions:    CartSessions[];
-}
-
-//Interfaz de sesiones carrito
-export interface CartSessions {
-    date:               string;
-    currentSelection:   number; 
+    eventId?:     string;
+    totalAmount?: number;
 }
