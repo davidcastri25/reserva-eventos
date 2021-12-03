@@ -22,7 +22,7 @@ export class CartService {
     let indexEvent: number = 0; //Index donde se ubica el evento
     let indexSession: number = 0; //Index donde se ubica una sesión dentro de un evento
 
-    console.log('desde servicio', cartReceived, action);
+    // console.log('desde servicio', cartReceived, action);
 
     if (action === 'increment') {
       //Compruebo si ya hay en el array un Cart con el id
@@ -41,8 +41,8 @@ export class CartService {
 
         //Compruebo si en las sesiones del evento con el index devuelto ya existe una igual
         indexSession = this.sessionAlreadyAdded(cartReceived.sessions[0].date, indexEvent);
-        console.log('sesión igual',indexSession);
-        console.log('cartReceived cuando ya hay un evento', cartReceived)
+        // console.log('sesión igual',indexSession);
+        // console.log('cartReceived cuando ya hay un evento', cartReceived)
 
         //Si no hemos encontrado la sesión, hacemos push
         if (indexSession === -1) {
@@ -90,7 +90,7 @@ export class CartService {
     
     
     this.cart.next(this.arrayCart);
-    console.log('desde servicio array', this.arrayCart)
+    // console.log('desde servicio array', this.arrayCart)
   }
 
 

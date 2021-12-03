@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { Cart, Session } from 'src/app/events/interfaces/interfaces';
@@ -23,7 +23,7 @@ export class ShoppingCartComponent implements OnInit {
     this.cartService.cart$
       .subscribe(cartArrayReturned => {
         this.cartArray = cartArrayReturned;
-        console.log('shoppingCart', this.cartArray);
+        // console.log('shoppingCart', this.cartArray);
       });
   }
 
