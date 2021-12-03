@@ -4,6 +4,10 @@
     height: 100%;
 }
 
+h5 {
+    letter-spacing: 0.7px;
+}
+
 .title-hover:hover {
     @include title-hover;
 }
@@ -14,4 +18,8 @@ img {
 
 img:hover {
     @include image-hover;
+}
+
+button {
+    letter-spacing: 0.7px;
 }
