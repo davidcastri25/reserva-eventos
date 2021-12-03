@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "iniciarapp": "npm install && ng serve -o"
   },
   "environment": {
     "node": "14.17.3"
