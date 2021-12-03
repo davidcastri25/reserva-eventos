@@ -1,27 +1,25 @@
-# ReservaEventos
+# Reserva Eventos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+_Se quiere implementar un cliente web para gestionar reservas de localidades de eventos con distintas sesiones y disponibilidades._
 
-## Development server
+## Comenzando
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+_Para obtener una copia del repositorio a nivel local_
 
-## Code scaffolding
+```
+git clone https://github.com/davidcastri25/reserva-eventos.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+_Una vez clonado el proyecto puedes ejecutar el siguiente comando, que instalará las dependencias y hará el serve de la aplicación en tu navegador por defecto._
 
-## Build
+```
+npm run iniciarapp
+```
+## Prerequisitos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+_Angular CLI version 12.1.3._
+_Node version 14.17.3._
+## Dependencias
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+_@ng-bootstrap/ng-bootstrap_
+_@fortawesome/angular-fontawesome_
