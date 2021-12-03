@@ -18,8 +18,10 @@ npm run iniciarapp
 ## Prerequisitos
 
 _Angular CLI version 12.1.3._
+
 _Node version 14.17.3._
 ## Dependencias
 
 _@ng-bootstrap/ng-bootstrap_
+
 _@fortawesome/angular-fontawesome_
